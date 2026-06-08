@@ -1,23 +1,23 @@
-import staff1 from "../assets/images/staff1.png";
-import staff2 from "../assets/images/staff2.png";
+import staff1 from "../assets/images/Staff1.png";
+import staff2 from "../assets/images/Staff2.png";
 import staff3 from "../assets/images/WALTER.jpg";
-import staff4 from "../assets/images/staff4.png";
-import staff5 from "../assets/images/staff5.png";
-import staff6 from "../assets/images/staff6.png";
-import staff7 from "../assets/images/staff7.png";
-import staff8 from "../assets/images/staff8.png";
-import staff9 from "../assets/images/staff9.png";
-import staff10 from "../assets/images/staff10.png";
-import staff11 from "../assets/images/staff11.png";
-import staff12 from "../assets/images/staff12.png";
-import staff13 from "../assets/images/staff13.png";
-import staff14 from "../assets/images/staff14.png";
-import staff15 from "../assets/images/staff15.png";
-import staff16 from "../assets/images/staff16.png";
-import staff17 from "../assets/images/staff17.png";
-import staff18 from "../assets/images/staff18.png";
-import staff19 from "../assets/images/staff19.png";
-// import staff20 from "../assets/images/staff20.png";
+import staff4 from "../assets/images/Staff4.png";
+import staff5 from "../assets/images/Staff5.png";
+import staff6 from "../assets/images/Staff6.png";
+import staff7 from "../assets/images/Staff7.png";
+import staff8 from "../assets/images/Staff8.png";
+import staff9 from "../assets/images/Staff9.png";
+import staff10 from "../assets/images/Staff10.png";
+import staff11 from "../assets/images/Staff11.png";
+import staff12 from "../assets/images/Staff12.png";
+import staff13 from "../assets/images/Staff13.png";
+import staff14 from "../assets/images/Staff14.png";
+import staff15 from "../assets/images/Staff15.png";
+import staff16 from "../assets/images/Staff16.png";
+import staff17 from "../assets/images/Staff17.png";
+import staff18 from "../assets/images/Staff18.png";
+import staff19 from "../assets/images/Staff19.png";
+// import staff20 from "../assets/images/Staff20.png";
 
 export const teamMembers = [
   {
