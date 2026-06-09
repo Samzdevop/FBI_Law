@@ -95,8 +95,8 @@ export default function Location() {
                             </div>
 
                             <div className="space-y-2">
-                                <p>P {location.phone}</p>
-                                <p>F {location.fax}</p>
+                                {/* <p>P {location.phone}</p> */}
+                                {/* <p>F {location.fax}</p> */}
                             </div>
 
                             </div>

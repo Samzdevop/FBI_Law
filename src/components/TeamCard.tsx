@@ -28,9 +28,9 @@ export default function TeamCard({ TeamMember: member }: { TeamMember: TeamMembe
         {member.position}
       </p>
 
-      <p className="text-[#D4AF37] mt-2 text-sm">
+      {/* <p className="text-[#D4AF37] mt-2 text-sm">
         {member.email}
-      </p>
+      </p> */}
 
       <button
         onClick={() => setShowBio(!showBio)}

@@ -14,13 +14,13 @@ export default function Contactus() {
         <div className="grid md:grid-cols-2 gap-16 relative z-10">
             <div className="space-y-10 text-sm text-gray-300">
             <div className="space-y-2">
-            <h2 className="text-lg text-[#fbaf19]">Illinois Headquarters</h2>
+            <h2 className="text-lg text-[#fbaf19]">Canada</h2>
                 <div className="flex items-start gap-6">
-                <p className="min-w-[180px]">1301 W 22nd St</p>
+                <p className="min-w-[180px]">3525 Platinum Dr. Mississauga ON L5M 2R9</p>
                 <p>P 630.819.8344</p>
                 </div>
 
-                <div className="flex items-start gap-6">
+                {/* <div className="flex items-start gap-6">
                 <p className="min-w-[180px]">Suite 201</p>
                 <p>F 630.214.0077</p>
                 </div>
@@ -28,16 +28,16 @@ export default function Contactus() {
                 <div className="flex items-start gap-6">
                 <p className="min-w-[180px]">Oakbrook, IL 60523</p>
                 <p></p>
-                </div>
-                {/* <div className="pt-4">
+                </div> */}
+                <div className="pt-4">
                 <img
                     src={cert}
                     className="w-24"
                     alt="certification"
                 />
-                </div> */}
+                </div>
             </div>
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
                     <h2 className="text-lg text-[#fbaf19]">california</h2>
                 <div className="flex items-start gap-6">
                 <p className="min-w-[180px]">1590 ADAMS AVE</p>
@@ -59,7 +59,7 @@ export default function Contactus() {
                     alt="certification"
                 />
                 </div>
-            </div>
+            </div> */}
 
             </div>
             <div className="space-y-4 bg-[#1a1a1a] p-6 border border-gray-800 relative">

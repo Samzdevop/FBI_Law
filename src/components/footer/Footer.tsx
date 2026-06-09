@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -6,11 +7,16 @@ export default function Footer() {
 <div className="text-center space-y-6">
 
   <div className="text-[#D4AF37] text-sm uppercase gap-6 flex justify-center">
-    <span>Home</span>
+    <Link to="/">Home</Link>
+    <Link to="/about">About</Link>
+    <Link to="/practice-areas">Practice Areas</Link>
+    <Link to="/news">News</Link>
+    <Link to="/contact">Contact</Link>
+    {/* <span>Home</span>
     <span>About</span>
     <span>Practice Areas</span>
     <span>News</span>
-    <span>Contact</span>
+    <span>Contact</span> */}
   </div>
 
   <p className="text-white text-xs">
