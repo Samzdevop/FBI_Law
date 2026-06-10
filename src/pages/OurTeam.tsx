@@ -4,7 +4,7 @@ import { teamMembers } from "../utility/teamData";
 import TeamCard from "../components/TeamCard";
 import Contactus from "../components/Contactus";
 import Footer from "../components/footer/Footer";
-import shuaibahmed from "../assets/images/shuaibahmed.png";
+import shuaibahmed from "../assets/images/ASPLOGO-remove.png";
 export default function OurTeam() {
     const [selectedMember, setSelectedMember] = useState("all");
 
@@ -77,7 +77,7 @@ export default function OurTeam() {
               <div className="flex-1">
                 <h2 className="text-[#D4AF37] text-3xl md:text-4xl font-serif uppercase "
                 >
-                  Shuaib Ahmed
+                  ASP Law Group Founders
                 </h2>
 
                 <p className="uppercase tracking-[4px] text-white mt-2"
@@ -85,7 +85,7 @@ export default function OurTeam() {
                   Owner and President
                 </p>
 
-                <a
+                {/* <a
                   href="mailto:sahmed@asalawgroup.net"
                   className="
                     text-[#D4AF37]
@@ -94,7 +94,7 @@ export default function OurTeam() {
                   "
                 >
                   sahmed@asalawgroup.net
-                </a>
+                </a> */}
 
                 <div className="mt-8 text-gray-300 leading-8 space-y-5"
                 >
@@ -138,7 +138,7 @@ export default function OurTeam() {
             <div className="max-w-7xl mx-auto">
 
                 <h2 className="text-center text-white text-xl md:text-3xl font-serif uppercase">
-                The ASA Law Group Team
+                The ASP Law Group Team
                 </h2>
 
                 <div className="flex justify-center mt-8">

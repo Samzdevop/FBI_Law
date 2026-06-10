@@ -38,7 +38,7 @@ export const teamMembers = [
   },
   {
     id: 3,
-    name: "WALTER Don",
+    name: "Mr WALTER Don",
     position: "Marketing and Sales Coordinator",
     email: "walter@ASALawGroup.net",
     image: staff3,
