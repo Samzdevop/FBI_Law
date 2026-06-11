@@ -31,7 +31,7 @@ export const teamMembers = [
   {
     id: 2,
     name: "Arpie Baghdassarian",
-    position: "Attorney, California Office",
+    position: "Marketing and Sales Coordinator",
     email: "abaghdassarian@asalawgroup.net",
     image: staff2,
     bio: "Arpie Baghdassarian received her JD from Southwestern Law school. Prior to law school, Arpie attended UCI, where she doubled majored in Political Science and Criminology, Law and Society.\n\nArpie believes communication is key to a successful partnership with her clients. She always takes the extra steps to ensure her clients are informed, while fiercely litigating claims. She is always up for a challenge!\n\nIn addition to her career, Arpie spends her free time volunteering with the ANCA, helping to advocate and advance Armenian issues that are near and dear to her heart."
@@ -39,7 +39,7 @@ export const teamMembers = [
   {
     id: 3,
     name: "Mr WALTER Don",
-    position: "Marketing and Sales Coordinator",
+    position: "Attorney",
     email: "walter@ASALawGroup.net",
     image: staff3,
     bio: "ASA is excited to partner with Walter Don, as our Marketing and Sales Coordinator. Walter Don is a graduate of St. Xavier University and has extensive experience in marketing and sales. After beginning his career in medical sales, he transitioned from the corporate sector to build a successful consulting practice serving healthcare professionals throughout the Chicago area. Walter has extensive experience working with orthopaedic surgeons, interventional pain management physicians, neurosurgeons, and physical therapists, as well as collaborating with the legal community to organize CEU-accredited programs. He is a strategic planner with a proven ability to develop and implement initiatives that drive client growth"
