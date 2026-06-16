@@ -58,10 +58,10 @@ export default function Navbar() {
                 alt="FBI Legal"
                 className="
                   h-18
-                  sm:h-20
-                  md:h-25
-                  lg:h-35
-                  xl:h-45
+                  sm:h-18
+                  md:h-20
+                  lg:h-25
+                  xl:h-30
                   w-auto
                   object-contain
                 "
