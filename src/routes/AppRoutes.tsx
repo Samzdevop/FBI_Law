@@ -3,10 +3,10 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import PracticeArea from "../pages/PracticeArea";
+import SectorsPage from "../pages/SectorsPage";
 import OurTeam from "../pages/OurTeam";
-import News from "../pages/News";
-import Location from "../pages/Location";
-import Contact from "../pages/Contact";
+import InsightsPage from "../pages/InsightsPage";
+import ContactPage from "../pages/Contact";
 
 export default function AppRoutes() {
   return (
@@ -32,31 +32,31 @@ export default function AppRoutes() {
           </MainLayout>
         }
       />
-      <Route path="/the-asa-team"
+      <Route path="/industries"
+        element={
+          <MainLayout>
+            <SectorsPage />
+          </MainLayout>
+        }
+      />
+      <Route path="/team"
         element={
           <MainLayout>
             <OurTeam />
           </MainLayout>
         }
       />
-      <Route path="/news"
+      <Route path="/blogs"
         element={
           <MainLayout>
-            <News />
-          </MainLayout>
-        }
-      />
-      <Route path="/location"
-        element={
-          <MainLayout>
-            <Location />
+            <InsightsPage  />
           </MainLayout>
         }
       />
       <Route path="/contact"
         element={
           <MainLayout>
-            <Contact />
+            <ContactPage />
           </MainLayout>
         }
       />

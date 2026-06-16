@@ -1,124 +1,364 @@
-import bannerImage from "../assets/images/AboutImage.jpg";
-import team1 from "../assets/images/team1.gif";
-import Contactus from "../components/Contactus";
+import { motion } from "framer-motion";
+import {
+  FaBalanceScale,
+  FaHandshake,
+  FaShieldAlt,
+  FaAward,
+  FaUsers,
+  FaBriefcase,
+  FaUniversity,
+} from "react-icons/fa";
+
+import legacyImage from "../assets/images/justice.png";
+import partner1 from "../assets/images/partner.jpeg";
+import partner2 from "../assets/images/partner2.jpeg";
+import partner3 from "../assets/images/lawyer2.jpeg";
+// import partner3 from "../assets/images/visily-image (3).png"; 
+import lagosImg from "../assets/images/lagos.jpg";
+import calabarImg from "../assets/images/calabar.jpg";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/footer/Footer";
+import { SiCultura } from "react-icons/si";
 
 export default function About() {
+  const values = [
+    {
+      icon: <FaBalanceScale />,
+      title: "OUR MISSION",
+      text: "Mission	To deliver clear, strategic and practical legal solutions that protect our clients’ interests and support their growth.",
+    },
+    {
+      icon: <FaHandshake />,
+      title: "OUR VISION",
+      text: "To become a trusted legal partner for businesses, institutions and individuals in Nigeria and across Africa.",
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: "OUR VALUES",
+      text: "Professionalism, Integrity, Excellence, Accountability and Confidentiality.",
+    },
+    {
+      icon: <SiCultura />,
+      title: "OUR CULTURE",
+      text: "We respond with urgency, think strategically, take ownership and deliver excellence.",
+    },
+  ];
+
+  const locations = [
+    {
+      title: "Abuja (Headquarters)",
+      image:
+        "https://images.unsplash.com/photo-1542382257-80dedb725088",
+      address: "Central Business District, Abuja",
+    },
+    {
+      title: "Lagos",
+      image: lagosImg,
+      address: "Victoria Island, Lagos",
+    },
+    {
+      title: "Calabar",
+      image: calabarImg,
+      address: "Marian Road, Calabar",
+    },
+  ];
+
+  const stats = [
+    {
+      icon: <FaAward />,
+      number: "500+",
+      title: "Cases Won",
+    },
+    {
+      icon: <FaUsers />,
+      number: "150+",
+      title: "Clients Served",
+    },
+    {
+      icon: <FaBriefcase />,
+      number: "20+",
+      title: "Practice Areas",
+    },
+    {
+      icon: <FaUniversity />,
+      number: "10+",
+      title: "Years Experience",
+    },
+  ];
+
+  const navigate = useNavigate();
   return (
-    <div className="bg-black text-white overflow-x-hidden">
+    <div className="bg-[#F8F8FA] overflow-x-hidden">
 
-      {/* HERO BANNER */}
-      <section className="relative h-[450px] md:h-[520px]">
-        <img
-          src={bannerImage}
-          alt="About Banner"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+      {/* HERO */}
+      <section className="bg-[#050B2B] text-white py-24">
+        <div className="max-w-7xl mx-auto px-6">
 
-        <div className="absolute inset-0 bg-black/50" />
-      </section>
-
-      {/* ABOUT FLOATING CARD */}
-      <section className="relative z-20">
-          <div className="relative">
-          <div className="w-[90%] md:w-[500px] lg:w-[550px] absolute left-1/2 lg:left-[55%] -translate-x-1/2 -top-52">
-
-          {/* GOLD HEADER */}
-          <div
-            className="h-[55px] flex items-center px-6"
-            style={{
-              background:
-                "linear-gradient(264deg, #fbaf19, #fff1a3 25%, #c9812a 51%, #f3c45e 77%, #fff1a3)",
-            }}
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="inline-block px-4 py-1 text-xs rounded-full border border-blue-400 text-blue-300 mb-5"
           >
-            <h2 className="text-black font-semibold text-xl">
-              About
-            </h2>
-          </div>
+            ABOUT FBI LEGAL
+          </motion.span>
 
-          {/* CONTENT */}
-          <div className="bg-black p-6">
-            <div className="grid md:grid-cols-2 gap-6 text-[13px] leading-6 text-gray-300">
-              <p>
-                ASA Law Group was founded for one simple, yet very important
-                reason: to put the interests of our clients first. Period.
-                While many firms preach this same message, the interests of
-                the firm and the interests of the client are not always aligned.
-              </p>
-
-              <p>
-                Our firm's internal structure is predicated upon truly
-                understanding the business model, corporate culture,
-                organizational challenges and how we may become part of our
-                client's team.
-              </p>
-
-              <p>
-                We are not a billable centered practice; rather, we are a
-                client centered practice and can prove it.
-              </p>
-
-              <p>
-                We formulate litigation strategies not only based upon the
-                law and facts of each case, but also with the vision to
-                advance our client's overall organizational goals.
-              </p>
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DEMAND MORE SECTION */}
-      <section className="flex px-6 mt-84 md:mt-54 lg:mt-60 md:px-20 ">
-        <div className="ml-auto  mr-[-50px] bg-[#2d2d2d] p-8 md:p-12">
-          <h2 className="text-[#D4AF37] text-3xl font-serif uppercase">
-            Demand More.
-          </h2>
-
-          <p className="mt-3 text-white text-md">
-            Simply put, client goals include minimizing litigation costs,
-            mitigating exposure, securing<br/> an amicable yet successful
-            resolution, and ensuring prompt case disposition.
-          </p>
-        </div>
-      </section>
-
-      {/* TEAM SECTION */}
-      <section className="px-6 md:px-20 py-16">
-        <div className="border border-[#D4AF37] relative p-8 md:p-12">
-
-          <h2 className="uppercase text-lg md:text-2xl font-serif max-w-3xl">
-            How Do We Deliver On Our Promises?
+          <h1 className="text-4xl md:text-6xl font-bold max-w-3xl leading-tight">
+            Rooted in Tradition.
             <br />
-            By Hiring, Training And Continually Developing The Best Team.
-          </h2>
-            <div className="flex justify-center mt-12">
-                <img
-                    src={team1}
-                    alt="Team"
-                    className="w-[500px] md:w-[650px] object-contain"
-                />
-            </div>
+            Driven by Strategy.
+          </h1>
 
-          {/* CTA BUTTON */}
-          <div className="absolute -bottom-5 right-4">
+          <p className="mt-6 text-gray-300 max-w-2xl">
+            FBI Legal is a modern law firm committed to delivering strategic, practical and client-centered legal solutions. 
+            We work with businesses, institutions, individuals and public-sector clients across a range of legal and commercial matters. 
+            Our approach combines professionalism, responsiveness, strategic thinking and a deep commitment to excellence
+          </p>
+
+          <div className="flex flex-wrap gap-4 mt-8">
+            <button 
+              onClick={()=>navigate('/contact')} 
+              className="bg-[#2336D6] px-6 py-3 rounded-lg">
+              Speak to a Lawyer
+            </button>
+
             <button
-              className="text-black px-6 py-3 rounded-full text-sm font-semibold"
-              style={{
-                background:
-                  "linear-gradient(272deg, #fbaf19 1%, #fff1a3 24%, #c9812a 44%, #f3c45e 70%, #fff1a3)",
-              }}
-            >
-              Read About Our Team
+              onClick={()=>navigate('/practice-areas')}  
+              className="border border-white px-6 py-3 rounded-lg">
+              Explore Practice Areas
             </button>
           </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+            <img
+              src={legacyImage}
+              alt=""
+              className="rounded-xl"
+            />
+            {/* <div className="absolute -bottom-6 left-10 bg-[#2336D6] text-white p-5 rounded-lg">
+              <h3 className="text-2xl font-bold">15+</h3>
+              <p>Years Delivering Legal Excellence</p>
+            </div> */}
+          </div>
+          <div>
+            <span className="text-blue-600 text-sm font-semibold">
+              OUR LEGACY
+            </span>
+
+            <h2 className="text-4xl font-bold mt-4 text-gray-900">
+              A Legacy of Strategic Legal Excellence
+            </h2>
+
+            <p className="mt-6 text-gray-600 leading-relaxed">
+              Since inception, FBI Legal has consistently delivered
+              strategic legal guidance to corporations, institutions,
+              entrepreneurs and individuals.
+            </p>
+
+            <div className="grid grid-cols-2 gap-6 mt-8">
+
+              <div>
+                <h4 className="font-bold text-gray-900">TRUST</h4>
+                <p className="text-gray-600 text-sm">
+                  Built through long-term client relationships.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-gray-900">IMPACT</h4>
+                <p className="text-gray-600 text-sm">
+                  Delivering measurable legal outcomes.
+                </p>
+              </div>
+
+            </div>
+          </div>
 
         </div>
       </section>
-      <Contactus />
-      
-      <Footer />  
+
+      {/* CORE FOUNDATION */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+
+        <div className="text-center mb-14">
+          <span className="text-blue-600 text-sm">
+            FOUNDATION
+          </span>
+
+          <h2 className="text-4xl font-bold text-gray-900 mt-3">
+            Our Core Foundation
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {values.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-8 shadow-sm border"
+            >
+              <div className="text-[#2336D6] text-2xl mb-5">
+                {item.icon}
+              </div>
+
+              <h3 className="text-black font-bold mb-4">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-600 text-sm leading-relaxed">
+                {item.text}
+              </p>
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+      {/* PARTNERSHIP SECTION */}
+      <section className="max-w-7xl mx-auto px-6 py-20">
+
+        <div className="grid lg:grid-cols-2 gap-12">
+
+          <div>
+            <span className="text-blue-600 text-sm">
+              CLIENT APPROACH
+            </span>
+
+            <h2 className="text-4xl font-bold mt-3 text-gray-900">
+              A Partnership Approach to Legal Service
+            </h2>
+
+            <p className="mt-5 text-gray-600">
+              We function as an extension of your team,
+              delivering practical legal solutions that
+              drive business growth.
+            </p>
+
+            <ul className="space-y-4 mt-8">
+
+              <li className="text-black flex gap-3">
+                <FaBalanceScale className="text-[#2336D6]" />
+                Strategic legal guidance.
+              </li>
+
+              <li className="text-black flex gap-3">
+                <FaUsers className="text-[#2336D6]" />
+                Client-focused engagement.
+              </li>
+
+              <li className="text-black flex gap-3">
+                <FaShieldAlt className="text-[#2336D6]" />
+                Risk mitigation solutions.
+              </li>
+
+            </ul>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <img src={partner1} className="rounded-xl h-full object-cover" />
+            <img src={partner2} className="rounded-xl h-full object-cover" />
+            <img src={partner3} className="rounded-xl h-full object-cover col-span-2" />
+          </div>
+
+        </div>
+      </section>
+
+      {/* LOCATIONS */}
+      <section className="max-w-7xl mx-auto px-6 py-10">
+
+        <div className="text-center mb-14">
+          <span className="text-blue-600 text-sm">
+            LOCATIONS
+          </span>
+
+          <h2 className="text-4xl font-bold text-gray-900 mt-3">
+            Strategic Hubs Across Nigeria
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {locations.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl overflow-hidden shadow-sm"
+            >
+              <img
+                src={item.image}
+                className="w-full h-52 object-cover"
+              />
+
+              <div className="p-6">
+                <h3 className="text-black font-bold text-lg">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm mt-2">
+                  {item.address}
+                </p>
+
+                {/* <div className="flex items-center gap-2 mt-4 text-[#2336D6] text-sm">
+                  <FaMapMarkerAlt />
+                  View Location
+                </div> */}
+              </div>
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+      <section className="bg-[#050B2B] py-20 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-center text-4xl font-bold mb-14">
+            A Recognized Authority In Law
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl text-[#2336D6] flex justify-center mb-4">
+                  {stat.icon}
+                </div>
+
+                <h3 className="text-3xl font-bold">
+                  {stat.number}
+                </h3>
+
+                <p className="text-gray-400 mt-2">
+                  {stat.title}
+                </p>
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section className="bg-[#2336D6] py-16 text-white">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold">
+            Ready to secure your strategic legal partner?
+          </h2>
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <button 
+              onClick={()=>navigate('/contact')}
+              className="bg-white text-[#2336D6] px-6 py-3 rounded-lg font-semibold">
+              Schedule a Consultation
+            </button>
+            <button 
+              onClick={()=>navigate('/team')}
+              className="border border-white px-6 py-3 rounded-lg">
+              Meet Our Team
+            </button>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </div>
   );
 }

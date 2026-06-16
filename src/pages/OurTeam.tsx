@@ -1,180 +1,134 @@
-import { useState } from "react";
-import teamvideo from "../assets/videos/teamvideo.mp4";
-import { teamMembers } from "../utility/teamData";
-import TeamCard from "../components/TeamCard";
-import Contactus from "../components/Contactus";
+import { ArrowRight } from "lucide-react";
+import PartnerCard from "../components/PartnerCard";
+import {featuredPartner,  partners } from "../utility/partners";
+import { useNavigate } from "react-router-dom";
 import Footer from "../components/footer/Footer";
-import shuaibahmed from "../assets/images/ASPLOGO-remove.png";
+
 export default function OurTeam() {
-    const [selectedMember, setSelectedMember] = useState("all");
-
-    const filteredMembers =
-        selectedMember === "all"
-            ? teamMembers
-            : teamMembers.filter(
-                (member) => member.name === selectedMember
-            );
+  const navigate = useNavigate();
   return (
-    <div className="text-white overflow-x-hidden bg-black/70">
-        <section className="relative w-full h-[60vh] md:h-[75vh]">
-            <video
-                className="absolute inset-0 w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-            >
-                
-                <source src={teamvideo} type="video/mp4" />
-            </video>
-        </section>
-        <section className="relative z-20 -mt-20">
-            <div className="max-w-6xl mx-auto">
-            <div
-                className="h-[60px] md:h-[80px] flex items-center px-6 md:px-10"
-                style={{
-                background:
-                    "linear-gradient(264deg, #fbaf19, #fff1a3 25%, #c9812a 51%, #f3c45e 77%, #fff1a3)",
-                }}
-            >
-                <h1 className="text-black text-2xl md:text-4xl font-serif">
-                Practice Areas
-                </h1>
+    <div className="bg-[#f8f9fb] min-h-screen">
+      <section className="relative overflow-hidden">
+        <div className="absolute right-0 top-0 h-full w-[20%] bg-[#132A8E]" />
+
+        <div className="bg-[#071028]">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24 relative z-10">
+            <div className="max-w-3xl">
+              <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+                Expertise Driven by Experience.
+              </h1>
+
+              <p className="text-slate-300 mt-6 text-lg leading-8 max-w-2xl">
+                Our multidisciplinary team combines deep legal knowledge
+                with international standards to deliver bespoke legal
+                solutions for the most ambitious enterprises.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED PARTNER */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src={featuredPartner.image}
+                alt={featuredPartner.name}
+                className="w-full max-w-xl rounded-xl shadow-2xl
+                "
+              />
             </div>
 
-            </div>
-            <div className="max-w-6xl bg-[#313131] mx-auto px-6 md:px-10">
-            <p className="text-white text-sm md:text-xl leading-relaxed max-w-6xl">
-                The internal culture of our firm is unprecedented. 
-                ASA Law Group's ethos of delivering the highest level of service to our clients demands we be experts in our field, 
-                continually evolve, and be well rounded individuals with a healthy work life balance. 
-                Our attorneys are encouraged to participate in community activities, maintain a healthy lifestyle and become empowered individuals. 
-                In turn, our clients benefit from increased productivity from our energized staff and attorneys that are inspired and ready to make positive impacts on your business.
-            </p>
+            <div>
+              <span className="inline-flex px-4 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold">
+                Leadership
+              </span>
 
-            <h2 className="mt-10 text-[#D4AF37] text-xl md:text-3xl lg:text-5xl font-serif uppercase">
-                we're ready.
-            </h2>
+              <h2 className="mt-5 text-5xl font-bold text-slate-900">
+                {featuredPartner.name}
+              </h2>
 
-            </div>
-        </section>
+              <p className="text-xl text-slate-500 mt-2">
+                {featuredPartner.role}
+              </p>
 
-        <section className="max-w-7xl mx-auto px-6 py-20">
-          <div className="border border-[#D4AF37] p-8 lg:p-12"
-          >
-            <div
-              className="flex flex-col lg:flex-row items-center gap-10"
-            >
-              {/* LEFT IMAGE */}
-              <div className="flex justify-center">
-                <img
-                  src={shuaibahmed}
-                  alt="Shuaib Ahmed"
-                  className="w-full h-full lg:w-[420px] lg:h-[520px] object-contain"
-                />
-              </div>
+              <blockquote className="mt-8 border-l-4 border-blue-600 pl-6 italic text-slate-600 text-lg leading-8">
+                "{featuredPartner.quote}"
+              </blockquote>
 
-              {/* RIGHT CONTENT */}
-              <div className="flex-1">
-                <h2 className="text-[#D4AF37] text-3xl md:text-4xl font-serif uppercase "
-                >
-                  ASP Law Group Founders
-                </h2>
+              <p className="mt-8 text-slate-600 leading-8">
+                {featuredPartner.bio}
+              </p>
 
-                <p className="uppercase tracking-[4px] text-white mt-2"
-                >
-                  Owner and President
-                </p>
+              <div className="flex flex-wrap gap-4 mt-10">
+                {/* <button className="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-lg font-medium">
+                  Meet Our People
+                </button> */}
 
-                {/* <a
-                  href="mailto:sahmed@asalawgroup.net"
-                  className="
-                    text-[#D4AF37]
-                    mt-3
-                    block
-                  "
-                >
-                  sahmed@asalawgroup.net
-                </a> */}
-
-                <div className="mt-8 text-gray-300 leading-8 space-y-5"
-                >
-                  <p>
-                    As the founder of ASP Law Group, I am passionate about providing trusted legal services, building strong client relationships, and creating solutions that help individuals and businesses navigate legal challenges with confidence
-                  </p>
-        {/* 
-                  <p>
-                    Thereafter, he served as an Assistant
-                    Attorney General for the State of
-                    Illinois defending various state
-                    departments in workers’ compensation
-                    cases.
-                  </p>
-
-                  <p>
-                    Mr. Ahmed formed ASA Law Group, LLC,
-                    located in Oak Brook, Illinois, with a
-                    mission to partner with employers in
-                    not only the defense of workers
-                    compensation and civil cases, but also
-                    as legal consultants in advancing the
-                    employer’s overall mission and
-                    corporate goals.
-                  </p>
-
-                  <p>
-                    Based upon client needs, Mr. Ahmed
-                    scaled the firm into California,
-                    forming ASA Law Group, Inc., which
-                    services employers throughout the
-                    state of California.
-                  </p> */}
-                </div>
+                <button 
+                  onClick={()=>navigate('/contact')}
+                  className="border border-slate-300 px-7 py-3 rounded-lg font-medium text-slate-700">
+                  Book a Consultation
+                </button>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="py-20 px-4 md:px-8 bg-black">
-            <div className="max-w-7xl mx-auto">
+      <section className="pb-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold text-slate-900">
+              Our Teams
+            </h2>
+            <p className="mt-3 text-slate-600">
+              Strategic leaders across our core practice areas.
+            </p>
+            <div className="h-px bg-slate-200 mt-8" />
+          </div>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {partners.map((partner, index) => (
+              <PartnerCard
+                key={index}
+                {...partner}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
-                <h2 className="text-center text-white text-xl md:text-3xl font-serif uppercase">
-                The ASP Law Group Team
-                </h2>
+      <section className="bg-[#2341d8]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white">
+              Ready to engage our expertise?
+            </h2>
 
-                <div className="flex justify-center mt-8">
-                <select
-                    value={selectedMember}
-                    onChange={(e) => setSelectedMember(e.target.value)}
-                    className="bg-[#313131] text-[#D4AF37] px-8 py-4 min-w-[300px] outline-none"
-                >
-                    <option value="all">
-                    Find A Team Member
-                    </option>
+            <p className="text-blue-100 mt-5 max-w-2xl mx-auto">
+              Our team is prepared to navigate your most complex
+              legal challenges with precision and authority.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-10">
+              <button
+                onClick={()=>navigate('/contact')}
+                className="bg-white text-[#2341d8] px-7 py-3 rounded-lg font-semibold">
+                Contact Our Team
+              </button>
 
-                    {teamMembers.map((member) => (
-                    <option
-                        key={member.id}
-                        value={member.name}
-                    >
-                        {member.name}
-                    </option>
-                    ))}
-                </select>
-                </div>
-
-                <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10">
-
-                {filteredMembers.map((member) => (
-                    <TeamCard
-                    key={member.id}
-                    TeamMember={member}
-                    />
-                ))}
-                </div>
+              <button 
+                onClick={()=>navigate('/practice-areas')}
+                className="bg-transparent border border-white text-white px-7 py-3 rounded-lg flex items-center gap-2">
+                Explore Practice Areas
+                <ArrowRight size={18} />
+              </button>
             </div>
-        </section>
-        <Contactus />
-        <Footer /> 
+          </div>
+        </div>
+      </section>
+      <Footer/>
     </div>
   );
 }
