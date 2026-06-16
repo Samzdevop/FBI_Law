@@ -7,7 +7,7 @@ import {
   Globe,
 } from "lucide-react";
 import Abuja from '../assets/images/Abuja.png'
-import lagos from '../assets/images/lagos.png'
+import lagos from '../assets/images/Lagos.png'
 import calabar from '../assets/images/calabar.png'
 
 export default function ContactPage() {
