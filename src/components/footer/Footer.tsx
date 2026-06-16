@@ -1,5 +1,4 @@
 import {
-  Scale,
   MapPin,
 } from "lucide-react";
 import { BsTwitter } from "react-icons/bs";

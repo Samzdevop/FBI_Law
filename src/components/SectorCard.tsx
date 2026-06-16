@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
 interface Props {
   title: string;
   image: string;
