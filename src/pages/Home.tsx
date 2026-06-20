@@ -243,7 +243,7 @@ export default function Home() {
 
   return (
     <div className="bg-white overflow-hidden">
-      {/* Hero Section */}
+
       <section className="relative min-h-screen w-full">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <motion.div
@@ -256,7 +256,7 @@ export default function Home() {
                 <img
                   src={slide.image}
                   alt=""
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
               </div>
@@ -327,95 +327,108 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section ref={aboutRef} className="py-20 sm:py-28 lg:py-32 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto pl-4 sm:pl-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-              transition={{ duration: 0.6 }}
-              className="order-2 lg:order-1"
-            >
-              <span className="text-[#d9b25f] font-semibold text-sm uppercase tracking-wider">
-                About Us
-              </span>
-              <h2 className="text-black text-3xl sm:text-4xl lg:text-5xl font-bold mt-2 leading-tight">
-                Why Global Firms Trust
-                <br className="hidden sm:block" /> FBI Legal
-              </h2>
-              <p className="mt-6 text-gray-600 text-base leading-relaxed">
-                FBI Legal is a dynamic, full-service firm committed to delivering high-quality legal solutions across litigation, corporate and commercial advisory, and public interest practice. Structured as a modern mixed-practice firm, we combine strong courtroom advocacy with practical business-focused legal advice and a deep commitment to justice and community impact.
-              </p>
+     {/* About Section */}
+    <section ref={aboutRef} className="py-20 sm:py-28 lg:py-32 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto pl-4 sm:pl-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+            transition={{ duration: 0.6 }}
+            className="order-2 lg:order-1"
+          >
+            <span className="text-[#d9b25f] font-semibold text-sm uppercase tracking-wider">
+              About Us
+            </span>
+            <h2 className="text-black text-3xl sm:text-4xl lg:text-5xl font-bold mt-2 leading-tight">
+              Why Global Firms Trust
+              <br className="hidden sm:block" /> FBI Legal
+            </h2>
+            <p className="mt-6 text-gray-600 text-base leading-relaxed">
+              FBI Legal is a dynamic, full-service firm committed to delivering high-quality legal solutions across litigation, corporate and commercial advisory, and public interest practice. Structured as a modern mixed-practice firm, we combine strong courtroom advocacy with practical business-focused legal advice and a deep commitment to justice and community impact.
+            </p>
 
-              <div className="mt-10 relative">
-                <div className="absolute left-0 top-0 w-0.5 h-full bg-gray-200" />
-                <motion.div
-                  className="absolute left-0 top-0 w-0.5 bg-[#d9b25f]"
-                  style={{
-                    height: lineHeight,
-                  }}
-                />
-                <div className="space-y-8 pl-8">
-                  {aboutPoints.map((point, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                      transition={{ duration: 0.5, delay: idx * 0.2 }}
-                      className="relative"
-                    >
-                      <div className="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-[#d9b25f] border-2 border-white shadow-md" />
-                      
-                      <h3 className="text-black font-bold text-lg">
-                        {point.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed mt-1">
-                        {point.description}
-                      </p>
-                    </motion.div>
-                  ))}
-                </div>
+            <div className="mt-10 relative">
+              <div className="absolute left-0 top-0 w-0.5 h-full bg-gray-200" />
+              <motion.div
+                className="absolute left-0 top-0 w-0.5 bg-[#d9b25f]"
+                style={{
+                  height: lineHeight,
+                }}
+              />
+              <div className="space-y-8 pl-8">
+                {aboutPoints.map((point, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isAboutInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                    transition={{ duration: 0.5, delay: idx * 0.2 }}
+                    className="relative"
+                  >
+                    <div className="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-[#d9b25f] border-2 border-white shadow-md" />
+                    
+                    <h3 className="text-black font-bold text-lg">
+                      {point.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mt-1">
+                      {point.description}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
+            </div>
 
-              <button
-                onClick={() => navigate("/about")}
-                className="mt-10 bg-[#07103A] hover:bg-[#0a1a4a] text-white px-8 py-3.5 rounded-sm font-semibold transition-colors duration-200 text-sm uppercase tracking-wide"
-              >
-                Learn More About Us
-              </button>
-            </motion.div>
+            <button
+              onClick={() => navigate("/about")}
+              className="mt-10 bg-[#07103A] hover:bg-[#0a1a4a] text-white px-8 py-3.5 rounded-sm font-semibold transition-colors duration-200 text-sm uppercase tracking-wide"
+            >
+              Learn More About Us
+            </button>
+          </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, x: 120 }}
+            animate={
+              isAboutInView
+                ? { opacity: 1, x: 0 }
+                : { opacity: 0, x: 120 }
+            }
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="order-1 lg:order-2 relative"
+          >
             <motion.div
-              initial={{ opacity: 0, x: 120 }}
+              initial={{ clipPath: "inset(0  0 0 100%)" }}
               animate={
                 isAboutInView
-                  ? { opacity: 1, x: 0 }
-                  : { opacity: 0, x: 120 }
+                  ? { clipPath: "inset(0 0% 0 0)" }
+                  : { clipPath: "inset(0 0 0 100% )" }
               }
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="order-1 lg:order-2 relative"
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+              className="relative lg:w-[140%]"
             >
-              <motion.div
-                initial={{ clipPath: "inset(0  0 0 100%)" }}
-                animate={
-                  isAboutInView
-                    ? { clipPath: "inset(0 0% 0 0)" }
-                    : { clipPath: "inset(0 0 0 100% )" }
-                }
-                transition={{ duration: 1.2, ease: "easeInOut" }}
-                className="relative lg:w-[140%]"
-              >
-                <img
-                  src={lawyerImage}
-                  alt=""
-                  className="w-full h-[750px] object-cover rounded-l-lg shadow-2xl"
-                />
-              </motion.div>
+              <img
+                src={lawyerImage}
+                alt="F. Baba Isa - Managing Partner"
+                className="w-full h-[750px] object-cover rounded-l-lg shadow-2xl"
+              />
+              
+              {/* Manager Info Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-l-lg">
+                <h3 className="text-white text-2xl font-bold">
+                  F. Baba Isa
+                </h3>
+                <p className="text-[#d9b25f] text-base font-medium">
+                  Managing Partner
+                </p>
+                <p className="text-gray-300 text-sm mt-2 max-w-sm">
+                  Doctoral Scholar | LLM | MBA | FIMC | CMC | Author | Conference Speaker
+                </p>
+              </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Practice Areas Section */}
       <section className="py-10 sm:py-18 lg:py-20 bg-gray-50">

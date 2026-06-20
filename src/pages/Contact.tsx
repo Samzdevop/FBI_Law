@@ -12,7 +12,12 @@ import calabar from '../assets/images/calabar.png'
 import contactbanner from '../assets/images/contactbanner.png'
 import Footer from "../components/footer/Footer";
 
+
 export default function ContactPage() {
+
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/2347037162029', '_blank', 'noopener,noreferrer');
+  };
   return (
     <div className="bg-[#f8f9fc] min-h-screen">
       {/* HERO with Banner Image */}
@@ -171,12 +176,12 @@ export default function ContactPage() {
                 <div className="text-black space-y-3 mt-4 text-sm">
                   <div className="flex gap-3">
                     <MapPin size={16} className="text-[#d9b25f]" />
-                    CBD, Abuja, FCT
+                    Abuja, FCT
                   </div>
 
                   <div className="flex gap-3">
                     <Phone size={16} className="text-[#d9b25f]" />
-                    +234 801 234 5678
+                    +2347037162029 / +2348104824340
                   </div>
 
                   <div className="flex gap-3">
@@ -206,7 +211,7 @@ export default function ContactPage() {
                 <div className="space-y-3 mt-4 text-sm">
                   <div className="flex gap-3">
                     <MapPin size={16} className="text-[#d9b25f]" />
-                    Victoria Island, Lagos
+                     Lagos
                   </div>
 
                   {/* <div className="flex gap-3">
@@ -268,12 +273,12 @@ export default function ContactPage() {
               <div className="space-y-3 mt-5">
                 <div className="bg-[#d9b25f] text-black rounded-lg p-3 flex items-center gap-3 font-semibold">
                   <Phone size={16} />
-                  +234 801 234 5678
+                    +2347037162029
                 </div>
 
                 <div className="bg-[#d9b25f] text-black rounded-lg p-3 flex items-center gap-3 font-semibold">
                   <Mail size={16} />
-                  emergency@lawfirm.com
+                  info@fbi_legal.com
                 </div>
               </div>
             </div>
@@ -313,9 +318,11 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <button className="bg-[#25D366] hover:bg-[#1da851] text-white px-6 py-3 rounded-lg flex items-center gap-2 transition duration-200">
+          <button 
+            onClick={handleWhatsApp}
+            className="bg-[#25D366] hover:bg-[#1da851] text-white px-6 py-3 rounded-lg flex items-center gap-2 transition duration-200">
             <MessageCircle size={18} />
-            Start on WhatsApp
+              Start on WhatsApp
           </button>
         </div>
       </section>

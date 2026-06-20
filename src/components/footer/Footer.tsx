@@ -3,7 +3,7 @@ import {
 } from "lucide-react";
 import { BsTwitter } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
-import { LiaLinkedin } from "react-icons/lia";
+import { LiaInstagram, LiaLinkedin } from "react-icons/lia";
 import { Link, useNavigate } from "react-router-dom";
 import logofbi from '../../assets/images/FBI_Legalbgimg.png'
 
@@ -13,6 +13,10 @@ const Footer = () => {
   const handleNavigation = (path: string) => {
     navigate(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleSocialLink = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -50,23 +54,37 @@ const Footer = () => {
             </p>
 
             <div className="flex items-center gap-7 mt-10">
-              <LiaLinkedin
-                size={18}
-                strokeWidth={1.8}
-                className="text-[#b8c1d6] cursor-pointer hover:text-white transition"
-              />
+               <button 
+                onClick={() => handleSocialLink('https://www.instagram.com/fbi_legal?igsh=MXcwc202ZTBiZGdsbw==')}
+                className="text-[#b8c1d6] hover:text-white transition cursor-pointer"
+                aria-label="Instagram"
+              >
+                <LiaInstagram size={22} strokeWidth={1.8} />
+              </button>
 
-              <BsTwitter
-                size={18}
-                strokeWidth={1.8}
-                className="text-[#b8c1d6] cursor-pointer hover:text-white transition"
-              />
+              <button 
+                onClick={() => handleSocialLink('https://www.linkedin.com/company/fbi-legal/')}
+                className="text-[#b8c1d6] hover:text-white transition cursor-pointer"
+                aria-label="LinkedIn"
+              >
+                <LiaLinkedin size={22} strokeWidth={1.8} />
+              </button>
 
-              <FaFacebook
-                size={18}
-                strokeWidth={1.8}
-                className="text-[#b8c1d6] cursor-pointer hover:text-white transition"
-              />
+              <button 
+                onClick={() => handleSocialLink('https://x.com/FBI_Legal/')}
+                className="text-[#b8c1d6] hover:text-white transition cursor-pointer"
+                aria-label="Twitter/X"
+              >
+                <BsTwitter size={20} strokeWidth={1.8} />
+              </button>
+
+              <button 
+                onClick={() => handleSocialLink('https://www.facebook.com/profile.php?id=61568003608651')}
+                className="text-[#b8c1d6] hover:text-white transition cursor-pointer"
+                aria-label="Facebook"
+              >
+                <FaFacebook size={20} strokeWidth={1.8} />
+              </button>
             </div>
           </div>
 

@@ -28,7 +28,6 @@ export default function OurTeam() {
         </div>
       </section>
 
-      {/* FEATURED PARTNER */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">

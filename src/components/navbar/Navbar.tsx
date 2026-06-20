@@ -113,10 +113,6 @@ export default function Navbar() {
 
         </div>
 
-        {/* ===================================== */}
-        {/* MOBILE MENU */}
-        {/* ===================================== */}
-
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ${
             mobileMenu
