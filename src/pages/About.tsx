@@ -10,10 +10,10 @@ import {
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/footer/Footer";
-import legacyImage from "../assets/images/justice.png";
-import partner1 from "../assets/images/partner.jpeg";
-import partner2 from "../assets/images/partner2.jpeg";
-import partner3 from "../assets/images/lawyer2.jpeg";
+// import legacyImage from "../assets/images/justice.png";
+// import partner1 from "../assets/images/partner.jpeg";
+// import partner2 from "../assets/images/partner2.jpeg";
+// import partner3 from "../assets/images/lawyer2.jpeg";
 import lagosImg from "../assets/images/lagos.jpg";
 import calabarImg from "../assets/images/calabar.jpg";
 import { partners } from "../utility/partners";
