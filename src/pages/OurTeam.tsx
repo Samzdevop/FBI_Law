@@ -100,7 +100,7 @@ export default function OurTeam() {
         </div>
       </section>
 
-      <section className="bg-[#2341d8]">
+      <section className="bg-[#07103A]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
           <div className="text-center">
             <h2 className="text-4xl font-bold text-white">

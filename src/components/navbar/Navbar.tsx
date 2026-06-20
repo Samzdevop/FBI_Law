@@ -30,12 +30,12 @@ export default function Navbar() {
             <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-8">
               <div className="flex items-center gap-2">
                 <FiPhone size={12} />
-                <span>+234 000 000 0000</span>
+                <span>+2347037162029 / +2348104824340</span>
               </div>
 
               <div className="flex items-center gap-2">
                 <FiMail size={12} />
-                <span>contact@fbilegal.com</span>
+                <span>info@fbi_legal.com</span>
               </div>
 
             </div>
@@ -87,11 +87,11 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <button 
                 onClick={()=>navigate('/contact')}
-                className="border border-[#2143D7] text-[#2143D7] px-5 xl:px-6 py-2 rounded-md font-medium text-sm hover:bg-blue-50 transition">
+                className="border border-[#07103A] text-[#07103A] px-5 xl:px-6 py-2 rounded-md font-medium text-sm hover:bg-blue-50 transition">
                 Book Consultation
               </button>
 
-              <button className="bg-[#2143D7] text-white px-5 xl:px-6 py-2 rounded-md font-medium text-sm hover:bg-[#1734B2] transition">
+              <button className="bg-[#07103A] text-white px-5 xl:px-6 py-2 rounded-md font-medium text-sm hover:bg-[#1734B2] transition">
                 Speak to a Lawyer
               </button>
 

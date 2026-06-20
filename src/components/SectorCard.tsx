@@ -27,14 +27,14 @@ const SectorCard = ({
             <Icon size={16} className="text-white" />
           </div>
 
-          <h3 className="text-black font-semibold">
+          <h3 className="text-white font-semibold">
             {title}
           </h3>
         </div>
       </div>
 
       <div className="p-6">
-        <span className="text-blue-600 text-xs font-bold uppercase tracking-wider">
+        <span className="text-[#07103A] text-xs font-bold uppercase tracking-wider">
           Sector Focus
         </span>
 

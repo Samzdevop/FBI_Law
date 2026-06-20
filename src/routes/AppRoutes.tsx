@@ -7,6 +7,7 @@ import SectorsPage from "../pages/SectorsPage";
 import OurTeam from "../pages/OurTeam";
 import InsightsPage from "../pages/InsightsPage";
 import ContactPage from "../pages/Contact";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 export default function AppRoutes() {
   return (
@@ -57,6 +58,13 @@ export default function AppRoutes() {
         element={
           <MainLayout>
             <ContactPage />
+          </MainLayout>
+        }
+      />
+      <Route path="/privacy"
+        element={
+          <MainLayout>
+            <PrivacyPolicy />
           </MainLayout>
         }
       />

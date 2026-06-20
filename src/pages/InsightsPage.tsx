@@ -8,7 +8,8 @@ import {
 } from "lucide-react";
 import { insights } from "../utility/insights";
 import { useNavigate } from "react-router-dom";
-
+import insightbanner from '../assets/images/insightBanner.png';
+import Footer from "../components/footer/Footer";
 
 const tabs = [
   "All Insights",
@@ -22,27 +23,36 @@ const tabs = [
 const InsightsPage = () => {
   const [activeTab, setActiveTab] = useState("All Insights");
   const navigate = useNavigate();
+  
   return (
     <div className="min-h-screen bg-[#FAFBFC]">
-      {/* HERO */}
-      <section className="bg-[#F7F8FB] border-b">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16">
-          <p className="text-sm font-medium text-blue-600 mb-3">
+      <section className="relative min-h-[500px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src={insightbanner}
+            alt="Legal Insights"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 w-full py-16">
+          <p className="text-sm font-medium text-[#d9b25f] mb-3 uppercase tracking-wider">
             Insights & Publications
           </p>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#111827] max-w-4xl leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-4xl leading-tight">
             Strategic Perspectives on{" "}
-            <span className="text-blue-600">Nigerian Law</span>
+            <span className="text-[#d9b25f]">Nigerian Law</span>
           </h1>
 
-          <p className="mt-5 text-gray-600 max-w-3xl">
+          <p className="mt-5 text-gray-200 max-w-3xl">
             Explore legal insights, regulatory updates, and expert opinions
             designed to help businesses and institutions navigate complex legal
             matters with confidence.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-4 mt-8">
+          {/* <div className="flex flex-col md:flex-row gap-4 mt-8">
             <div className="relative flex-1">
               <Search
                 size={18}
@@ -52,15 +62,15 @@ const InsightsPage = () => {
               <input
                 type="text"
                 placeholder="Search articles, topics, authors..."
-                className="w-full h-12 pl-12 pr-4 bg-white border rounded-lg outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full h-12 pl-12 pr-4 bg-white border rounded-lg outline-none focus:ring-2 focus:ring-[#d9b25f]"
               />
             </div>
 
-            <button className="h-12 px-5 border rounded-lg bg-white flex items-center justify-center gap-2 hover:bg-gray-50">
+            <button className="h-12 px-5 border rounded-lg bg-white flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors duration-200">
               <SlidersHorizontal size={16} />
               Filter Articles
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -74,8 +84,8 @@ const InsightsPage = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`px-4 py-2 rounded-full text-sm transition whitespace-nowrap ${
                   activeTab === tab
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-100 hover:bg-gray-200"
+                    ? "bg-[#d9b25f] text-black font-semibold"
+                    : "bg-gray-500 hover:bg-gray-200"
                 }`}
               >
                 {tab}
@@ -98,7 +108,7 @@ const InsightsPage = () => {
           </p>
 
           <div className="grid lg:grid-cols-3 gap-6">
-            {insights.slice(0, 2).map((item:any) => (
+            {insights.slice(0, 2).map((item) => (
               <div
                 key={item.id}
                 className="relative rounded-2xl overflow-hidden h-[420px] group"
@@ -112,7 +122,7 @@ const InsightsPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
 
                 <div className="absolute bottom-0 p-6 text-white">
-                  <span className="px-3 py-1 rounded-full text-xs bg-blue-600">
+                  <span className="px-3 py-1 rounded-full text-xs bg-[#d9b25f] text-black font-semibold">
                     {item.category}
                   </span>
 
@@ -126,7 +136,7 @@ const InsightsPage = () => {
             {/* Newsletter */}
             <div className="rounded-2xl bg-[#0B1736] p-8 flex flex-col justify-center text-white">
               <div className="mx-auto mb-6">
-                <Scale size={45} />
+                <Scale size={45} className="text-[#d9b25f]" />
               </div>
 
               <h3 className="text-center text-3xl font-bold">
@@ -138,7 +148,7 @@ const InsightsPage = () => {
                 inbox.
               </p>
 
-              <button className="mt-8 bg-sky-500 rounded-lg py-3 font-medium">
+              <button className="mt-8 bg-[#d9b25f] hover:bg-[#c4a04e] text-black rounded-lg py-3 font-semibold transition-colors duration-200">
                 Subscribe Newsletter
               </button>
 
@@ -163,14 +173,10 @@ const InsightsPage = () => {
                 Browse recent articles and expert publications.
               </p>
             </div>
-
-            {/* <button className="text-blue-600 font-medium">
-              See All
-            </button> */}
           </div>
 
           <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
-            {insights.map((item:any) => (
+            {insights.map((item) => (
               <article
                 key={item.id}
                 className="bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition duration-300"
@@ -182,7 +188,7 @@ const InsightsPage = () => {
                 />
 
                 <div className="p-5">
-                  <span className="inline-flex px-3 py-1 rounded-full text-xs bg-blue-100 text-blue-700">
+                  <span className="inline-flex px-3 py-1 rounded-full text-xs bg-[#d9b25f]/10 text-[#d9b25f] font-semibold">
                     {item.category}
                   </span>
 
@@ -206,23 +212,23 @@ const InsightsPage = () => {
 
           {/* PAGINATION */}
           <div className="flex justify-center mt-14 gap-2">
-            <button className="w-10 h-10 border rounded-lg flex items-center justify-center">
+            <button className="w-10 h-10 border rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200">
               <ChevronLeft size={16} />
             </button>
 
-            <button className="w-10 h-10 bg-blue-600 text-white rounded-lg">
+            <button className="w-10 h-10 bg-[#d9b25f] text-black rounded-lg font-semibold">
               1
             </button>
 
-            <button className="text-black w-10 h-10 border rounded-lg">
+            <button className="text-black w-10 h-10 border rounded-lg hover:bg-gray-50 transition-colors duration-200">
               2
             </button>
 
-            <button className="text-black w-10 h-10 border rounded-lg">
+            <button className="text-black w-10 h-10 border rounded-lg hover:bg-gray-50 transition-colors duration-200">
               3
             </button>
 
-            <button className="text-black  w-10 h-10 border rounded-lg flex items-center justify-center">
+            <button className="text-black w-10 h-10 border rounded-lg flex items-center justify-center hover:bg-gray-50 transition-colors duration-200">
               <ChevronRight size={16} />
             </button>
           </div>
@@ -246,20 +252,23 @@ const InsightsPage = () => {
 
             <div className="flex flex-wrap gap-4">
               <button 
-                onClick={()=>navigate('/contact')}
-                className="bg-sky-500 text-white px-6 py-3 rounded-lg">
+                onClick={() => navigate('/contact')}
+                className="bg-[#d9b25f] hover:bg-[#c4a04e] text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+              >
                 Speak To An Expert
               </button>
 
               <button 
-                onClick={()=>navigate('/contact')}
-                className="bg-white px-6 py-3 rounded-lg">
+                onClick={() => navigate('/contact')}
+                className="bg-white hover:bg-gray-100 text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+              >
                 Book Consultation
               </button>
             </div>
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

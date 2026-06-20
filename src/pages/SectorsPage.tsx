@@ -1,31 +1,51 @@
 import { ArrowRight } from "lucide-react";
 import { sectors } from "../utility/sectors";
 import SectorCard from "../components/SectorCard";
+import sectorbgimg from '../assets/images/SectorBg.jpeg';
+import Footer from "../components/footer/Footer";
 
 export default function SectorsPage() {
   return (
     <div className="bg-white">
-      {/* HERO */}
-      <section className="py-24">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <span className="inline-flex items-center px-4 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-medium">
+      {/* HERO with Background Image */}
+      <section className="relative min-h-[600px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src={sectorbgimg}
+            alt="Sectors We Empower"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center w-full py-24">
+          <span className="inline-flex items-center px-4 py-1 rounded-full bg-[#d9b25f]/10 border border-[#d9b25f]/30 text-[#d9b25f] text-sm font-medium">
             Industries & Expertise
           </span>
 
-          <h1 className="mt-6 text-5xl font-bold text-slate-900">
+          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold text-white">
             Sectors We
-            <span className="text-blue-600">
+            <span className="text-[#d9b25f]">
               {" "}
               Empower
             </span>
           </h1>
 
-          <p className="max-w-2xl mx-auto mt-6 text-slate-600 leading-8">
-            ASA Law Group delivers legal support tailored to the
+          <p className="max-w-2xl mx-auto mt-6 text-gray-200 leading-8 text-base sm:text-lg">
+            FBI Legal delivers legal support tailored to the
             distinct operational realities of modern industries.
             We understand your business environment and the
             opportunities ahead.
           </p>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <button className="bg-[#d9b25f] hover:bg-[#c4a04e] text-black px-8 py-3.5 rounded-sm font-semibold transition-colors duration-200 text-sm uppercase tracking-wide">
+              Explore Our Sectors
+            </button>
+            <button className="border border-white text-white px-8 py-3.5 rounded-sm hover:bg-white hover:text-black transition-colors duration-200 text-sm uppercase tracking-wide">
+              Contact Our Experts
+            </button>
+          </div>
         </div>
       </section>
 
@@ -73,11 +93,11 @@ export default function SectorsPage() {
             </div>
 
             <div className="flex flex-wrap lg:justify-end gap-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-lg font-medium">
+              <button className="bg-[#d9b25f] hover:bg-[#c4a04e] text-black px-7 py-3 rounded-sm font-semibold transition-colors duration-200 text-sm uppercase tracking-wide">
                 Speak to a Lawyer
               </button>
 
-              <button className="bg-white text-slate-900 px-7 py-3 rounded-lg font-medium flex items-center gap-2">
+              <button className="bg-white text-slate-900 px-7 py-3 rounded-sm font-medium flex items-center gap-2 hover:bg-gray-100 transition-colors duration-200">
                 Book Consultation
                 <ArrowRight size={18} />
               </button>
@@ -85,6 +105,7 @@ export default function SectorsPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

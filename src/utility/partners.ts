@@ -1,6 +1,6 @@
 import lawyerImg from '../assets/images/lawyer2.jpeg'
-import partner1 from "../assets/images/partner.jpeg";
-import partner2 from "../assets/images/partner2.jpeg";
+import partner1 from "../assets/images/Odumegwu.jpeg";
+import partner2 from "../assets/images/Mbang.jpeg";
 import partner3 from "../assets/images/lawyer2.jpeg";
 
 export const featuredPartner = {
