@@ -8,6 +8,7 @@ import {
 } from "react-icons/fi";
 import fbi_logo from '../../assets/images/FBI_Legal.png'
 
+
 export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
@@ -22,6 +23,12 @@ export default function Navbar() {
   ];
 
   const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <div className="bg-[#020B2C] text-white text-xs">
@@ -30,12 +37,31 @@ export default function Navbar() {
             <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-8">
               <div className="flex items-center gap-2">
                 <FiPhone size={12} />
-                <span>+2347037162029 / +2348104824340</span>
+                <a
+                  href="tel:+2347037162029"
+                  className="hover:text-blue-300 transition"
+                >
+                  +2347037162029
+                </a>
+
+                <span>/</span>
+
+                <a
+                  href="tel:+2348104824340"
+                  className="hover:text-blue-300 transition"
+                >
+                  +2348104824340
+                </a>
               </div>
 
               <div className="flex items-center gap-2">
                 <FiMail size={12} />
-                <span>info@fbi_legal.com</span>
+                <a
+                  href="mailto:info@fbi_legal.com"
+                  className="hover:text-blue-300 transition"
+                >
+                  info@fbi_legal.com
+                </a>
               </div>
 
             </div>
@@ -72,6 +98,12 @@ export default function Navbar() {
                 <NavLink
                   key={link.name}
                   to={link.path}
+                  // onClick={() => {
+                  //   window.scrollTo({
+                  //     top: 0,
+                  //     behavior: "smooth",
+                  //   });
+                  // }}
                   className={({ isActive }) =>
                     `text-sm font-medium transition duration-300 ${
                       isActive
@@ -86,14 +118,14 @@ export default function Navbar() {
             </nav>
             <div className="hidden lg:flex items-center gap-3">
               <button 
-                onClick={()=>navigate('/contact')}
+                onClick={()=>handleNavigation('/contact')}
                 className="border border-[#07103A] text-[#07103A] px-5 xl:px-6 py-2 rounded-md font-medium text-sm hover:bg-blue-50 transition">
                 Book Consultation
               </button>
 
-              <button className="bg-[#07103A] text-white px-5 xl:px-6 py-2 rounded-md font-medium text-sm hover:bg-[#1734B2] transition">
+              {/* <button className="bg-[#07103A] text-white px-5 xl:px-6 py-2 rounded-md font-medium text-sm hover:bg-[#1734B2] transition">
                 Speak to a Lawyer
-              </button>
+              </button> */}
 
             </div>
 

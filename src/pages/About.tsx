@@ -109,7 +109,7 @@ export default function About() {
     },
     {
       icon: <FaUsers />,
-      number: "150+",
+      number: "98+",
       title: "Clients Served",
     },
     {

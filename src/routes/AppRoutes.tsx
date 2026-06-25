@@ -8,9 +8,12 @@ import OurTeam from "../pages/OurTeam";
 import InsightsPage from "../pages/InsightsPage";
 import ContactPage from "../pages/Contact";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
+import ScrollToTop from "../components/ScrollToTop";
 
 export default function AppRoutes() {
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       <Route path="/"
         element={
@@ -69,5 +72,6 @@ export default function AppRoutes() {
         }
       />
     </Routes>
+    </>
   );
 }

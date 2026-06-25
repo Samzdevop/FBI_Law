@@ -17,7 +17,7 @@ import Footer from "../components/footer/Footer";
 import heroImage from "../assets/images/Slider1.jpeg";
 import heroImage2 from "../assets/images/Slider2.jpeg";
 import heroImage3 from "../assets/images/Slider3.jpeg";
-import lawyerImage from "../assets/images/partner01.jpeg";
+import lawyerImage from "../assets/images/bossImg.jpeg";
 import industry1 from "../assets/images/Energy.png";
 import industry2 from "../assets/images/litigation.png";
 import industry3 from "../assets/images/c&f.png";
@@ -409,7 +409,7 @@ export default function Home() {
               <img
                 src={lawyerImage}
                 alt="F. Baba Isa - Managing Partner"
-                className="w-full h-[750px] object-cover rounded-l-lg shadow-2xl"
+                className="w-full h-[800px] object-cover rounded-l-lg shadow-2xl"
               />
               
               {/* Manager Info Overlay */}
@@ -527,7 +527,7 @@ export default function Home() {
               Our Identity & Strategic Positioning
             </h2>
             <p className="text-black mt-4 text-lg max-w-2xl mx-auto">
-              FBI Legal is built on a clear and deliberate identit: a structured, modern, and purpose-driven law firm designed to deliver both legal excellence and meaningful impact. What sets us apart is our ability to combine strong advocacy, practical commercial insight, and a deep commitment to public interest within a single, coordinated practice.
+              FBI Legal is built on a clear and deliberate identity: a structured, modern, and purpose-driven law firm designed to deliver both legal excellence and meaningful impact. What sets us apart is our ability to combine strong advocacy, practical commercial insight, and a deep commitment to public interest within a single, coordinated practice.
             </p>
           </div>
 
@@ -567,7 +567,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-row-2 gap-12 items-start">
             {/* Left side - Text content */}
              <motion.div
               initial={{ opacity: 0, x: -30 }}

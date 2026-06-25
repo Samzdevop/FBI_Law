@@ -1,7 +1,7 @@
 import lawyerImg from '../assets/images/lawyer2.jpeg'
 import partner1 from "../assets/images/Odumegwu.jpeg";
 import partner2 from "../assets/images/Mbang.jpeg";
-// import partner3 from "../assets/images/lawyer2.jpeg";
+import partner3 from "../assets/images/lawyer2.jpeg";
 
 export const featuredPartner = {
   name: "F. Baba Isa",
@@ -14,14 +14,14 @@ export const featuredPartner = {
 };
 
 export const partners = [
-  // {
-  //   name: "F. Baba Isa",
-  //   role: "Doctoral Scholar | LLM | MBA | FIMC | CMC | Author | Conference Speaker | Managing Partner at FBI Legal | Leading Legal Innovations.",
-  //   image:
-  //     partner3,
-  //   bio:
-  //     "F. Baba Isa is the Founder and Managing Partner of FBI Legal, with extensive experience in litigation, public interest law, and legal advisory. He holds an LL.M and LL.B from the University of Jos, an MBA from Nexford University, USA, and is a Certified Management Consultant. Known for his strong litigation practice and thought leadership, he is also recognized for leveraging digital platforms for legal education and client engagement.",
-  // },
+  {
+    name: "F. Baba Isa",
+    role: "Doctoral Scholar | LLM | MBA | FIMC | CMC | Author | Conference Speaker | Managing Partner at FBI Legal | Leading Legal Innovations.",
+    image:
+      partner3,
+    bio:
+      "F. Baba Isa is the Founder and Managing Partner of FBI Legal, with extensive experience in litigation, public interest law, and legal advisory. He holds an LL.M and LL.B from the University of Jos, an MBA from Nexford University, USA, and is a Certified Management Consultant. Known for his strong litigation practice and thought leadership, he is also recognized for leveraging digital platforms for legal education and client engagement.",
+  },
   {
     name: "Confidence Mbang, Esq.",
     role: "Dispute Resolution Lawyer",
