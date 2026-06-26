@@ -20,7 +20,7 @@ export default function PartnerCard({
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-top hover:scale-105 transition duration-500"
+          className="w-full h-full object-cover object-top hover:scale-105 transition duration-500"
         />
       </div>
 

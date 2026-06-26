@@ -35,8 +35,7 @@ export default function OurTeam() {
               <img
                 src={featuredPartner.image}
                 alt={featuredPartner.name}
-                className="w-full max-w-xl rounded-xl shadow-2xl
-                "
+                className="w-full max-w-xl rounded-xl shadow-2xl"
               />
             </div>
 

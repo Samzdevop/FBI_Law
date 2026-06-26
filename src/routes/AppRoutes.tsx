@@ -9,6 +9,7 @@ import InsightsPage from "../pages/InsightsPage";
 import ContactPage from "../pages/Contact";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import ScrollToTop from "../components/ScrollToTop";
+import FoundationPage from "../pages/Foundation";
 
 export default function AppRoutes() {
   return (
@@ -54,6 +55,13 @@ export default function AppRoutes() {
         element={
           <MainLayout>
             <InsightsPage  />
+          </MainLayout>
+        }
+      />
+      <Route path="/foundation"
+        element={
+          <MainLayout>
+            <FoundationPage  />
           </MainLayout>
         }
       />

@@ -104,7 +104,7 @@ export default function About() {
   const stats = [
     {
       icon: <FaAward />,
-      number: "500+",
+      number: "300+",
       title: "Cases Won",
     },
     {
@@ -315,7 +315,7 @@ export default function About() {
               <img
                 src={partner.image}
                 alt={partner.name}
-                className="w-full h-64 object-cover"
+                className="w-full h-94 object-cover object-top"
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900">

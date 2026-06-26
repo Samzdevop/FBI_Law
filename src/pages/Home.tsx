@@ -327,7 +327,6 @@ export default function Home() {
         </div>
       </section>
 
-     {/* About Section */}
     <section ref={aboutRef} className="py-20 sm:py-28 lg:py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto pl-4 sm:pl-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
