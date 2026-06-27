@@ -112,7 +112,7 @@ export default function FoundationPage() {
             alt="First Baba Isa Foundation"
             className="w-full h-full object-cover object-center"
             style={{
-              minHeight: "550px",
+              minHeight: "650px",
               width: "100%",
               objectFit: "cover",
               objectPosition: "center center",
@@ -141,7 +141,7 @@ export default function FoundationPage() {
             </p>
 
             <p className="mt-6 text-gray-200 max-w-3xl text-base md:text-lg leading-relaxed">
-              First Baba Isa Foundation (FBIF) is a registered non-profit organization committed to 
+              FBI Foundation is a registered non-profit organization committed to 
               advancing justice, empowering vulnerable communities, and creating opportunities for 
               individuals and families across Nigeria.
             </p>
@@ -349,7 +349,7 @@ export default function FoundationPage() {
               Join Us in Making a Difference
             </h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
-              At First Baba Isa Foundation, we believe that meaningful change begins when people 
+              At FBI Foundation, we believe that meaningful change begins when people 
               are empowered with knowledge, protected by justice, and given opportunities to succeed. 
               Together, we are building stronger communities and transforming lives.
             </p>

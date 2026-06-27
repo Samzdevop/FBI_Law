@@ -13,7 +13,7 @@ export default function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const navLinks = [
-    // { name: "Home", path: "/" },
+    { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Practice Areas", path: "/practice-areas" },
     { name: "Our Team", path: "/team" },

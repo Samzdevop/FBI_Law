@@ -105,11 +105,11 @@ export default function About() {
     {
       icon: <FaAward />,
       number: "300+",
-      title: "Cases Won",
+      title: "Cases Handled",
     },
     {
       icon: <FaUsers />,
-      number: "98+",
+      number: "300+",
       title: "Clients Served",
     },
     {
