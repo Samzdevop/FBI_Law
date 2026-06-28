@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "../components/footer/Footer";
-import founderbanner from "../assets/images/foundationbanner.jpeg";
+import founderbanner from "../assets/images/foundationbanner2.jpeg";
 
 export default function FoundationPage() {
   const missionRef = useRef(null);
@@ -105,17 +105,17 @@ export default function FoundationPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section with Banner Image */}
-      <section className="relative min-h-[550px] flex items-center overflow-hidden">
+      <section className="relative min-h-[850px] flex items-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <img
             src={founderbanner}
             alt="First Baba Isa Foundation"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top"
             style={{
-              minHeight: "650px",
+              minHeight: "850px",
               width: "100%",
               objectFit: "cover",
-              objectPosition: "center center",
+              objectPosition: "top center",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/50" />
